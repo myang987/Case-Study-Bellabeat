@@ -39,12 +39,12 @@ Marketing Strategies:
 
 # Process
 ## Tools
-**Data Source:** Kaggle
-**Original Format:** CSV
-**Data Storage:** On the cloud in Google Drive and Google BiqQuery
-**Data Manipulation:** Google BigQuery SQL
-**Data Visualization:** Tableau
-**Reports & Documentation:** Google Doc
+**Data Source:** Kaggle<br />
+**Original Format:** CSV<br />
+**Data Storage:** On the cloud in Google Drive and Google BiqQuery<br />
+**Data Manipulation:** Google BigQuery SQL<br />
+**Data Visualization:** Tableau<br />
+**Reports & Documentation:** Google Doc<br />
 
 ## Data
 The primary data source used in the analysis was public Fitbit user data acquired from Kaggle under CC0: Public Domain license. The data contains logged information about various health factors such as activity level and sleep from 33 unique users during the period of 2016-04-12 to 2016-05-12.
