@@ -93,7 +93,7 @@ Many of the datasets have problems with timestamp formatting when uploading to B
 <br />&emsp;- Binary indicator whether the log was manually recorded or automatically recorded
 
 ## Findings
-Why are users using smartwatches (Fitbit)?
+**Why are users using smartwatches (Fitbit)?**<br />
 *To track physical activity/sleep/weight?*
 <br />&emsp;- Calculate the proportion of data logs that can be attributed to daytime activity (rested and active) to sleep. Distributions of the per-minute factors (Steps, Intensity, METs, Heartrate, Calories) help show the proportion.
 
@@ -105,6 +105,35 @@ Why are users using smartwatches (Fitbit)?
 ![Distributions with filter2](/images/image6.png)
 <sub>Distributions filter to remove when Steps per Minute = 0</sub><br /><br />
 
-Can see a majority of the logged measurement occur during rest (steps = 0, intensity=0, and resting heart rate/METs/calorie levels). Inferring that activity logs where steps_per_min = 0 is the user at rest (84.92% of steps_per_min logs are zeros) All distributions are heavily right-skewed. We can infer that majority of logs are used during rest/sleep. 
+Can see a majority of the logged measurement occur during rest (steps = 0, intensity=0, and resting heart rate/METs/calorie levels). Inferring that activity logs where steps_per_min = 0 is the user at rest (84.92% of steps_per_min logs are zeros) All distributions are heavily right-skewed. We can infer that majority of logs are used during rest/sleep. <br />
 ![Percentage of Logs where steps = 0](/images/image7.png)
 <br /><sub>84.92% of the per-minute data points are when steps per minute = 0.</sub><br /><br />
+
+*Improve physical performance?*<br />
+It is hard to determine the type of physical activity based on given factors. The most probable type of activity would be walking/hiking/running can be determined by distance and activity intensity; high intensity and low distance may be other forms of exercise<br />
+Primary users of the data to track running. The ratio of high intensity, high distance to high intensity, low distance
+
+*Improving sleep?*<br />
+As a large majority of logs in the dataset occur when steps are 0, it is important to analyze the sleep patterns of the users. The dataset provides information on the sleep time and time in bed of the users. 
+![Average Sleep Minutes per Day](/images/image2.png)<br />
+There is no noticeable improvement in both the number of minutes asleep and the percentage of minutes in sleep to minutes in bed. On average, users spend 452.45 minutes in bed and 413.80 minutes asleep. The percentage of time asleep to time in bed does not show a significant improvement over the course of the data time period. While the analysis does not show improvement, a major reason for users to use smartwatches can be attributed to tracking their sleep patterns due to the proportion of data logs. 
+
+*Improve general health (weight)?*<br />
+Analyzing the improvement of weight/fat/BMI over the logged period using a time series of the factors.
+![Daily Weight and BMI Trend](/images/image8.png)
+![Daily Fat trend](/images/image3.png)
+<sub>Time series of weight/BMI/fat</sub><br />
+
+There is no noticeable improvement in weight/BMI/fat. The data has sparse logs for weight and BMI, as well as containing many null values for fat. This is an unreliable analysis of the usage of smartwatches for tracking health measures. Although the data contains a variable indicating the log to be manually or automatically saved, it is not enough to provide a reliable analysis.
+The time period may not be long enough for noticeable changes to occur in these factors. In general, improvement in these factors would take months of time, not available in the dataset
+
+## Limitations
+**__Weight__**<br />
+A bias was discovered after the analysis was conducted. The data collect information on a relatively short time period, this would skew the data away from meaningful discoveries about user’s usage to track weight. Biologically, a person’s weight and health do not change significantly in a month, it would be hard to tell from the data if the user's intentions are to improve health/weight conditions.
+
+**__Activity Type__**<br />
+Another limitation of the data is that it does not differentiate between the type of physical activity performed when tracking activity intensity. This can be a result of the technological limitations of a smartwatch as the most reliable measure to be collected are steps, heart rate, and location. Unless the user manually defines the type of activity, there is no concrete method to differentiate between, for example, running and biking. Rough estimates can be deduced based on a combination of activity intensity, distance, location, speed, heart rate, etc. While it is presumed that generally, most users will use a watch to track aerobic exercises, without more specific data, it is difficult to provide further recommendations based on customer segmentation of activity type. 
+
+# Recommendation
+Using this dataset, we can infer that a majority of smart-watch users purchase the product to track and maintain their fitness activity levels and progress, as well as sleeping patterns. As Bellabeat is looking to improve its operations and products through marketing, there is a large opportunity for the company to focus on the Bellabeat Time smartwatch. Future marketing campaigns should have an emphasis on the benefits of the product when used during those activities.
+
