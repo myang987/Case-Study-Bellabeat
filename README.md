@@ -5,6 +5,6 @@
 
 ##### [Tableau Dashboard](https://public.tableau.com/app/profile/mike3830/viz/BellabeatProject_16672486110060/DailyActivity)
 
-##### [Tableau Story Presentation to Skateholders]()
+##### [Fitbit Data](https://www.kaggle.com/code/yadavameya/bellabeat-case-study-fitbit-data-analysis)
 
 #
