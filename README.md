@@ -38,7 +38,7 @@ Marketing Strategies:
 - Ads through Google Display Network to support marketing campaigns around key dates
 
 # Process
-##Tools
+## Tools
 **Data Source:** Kaggle
 **Original Format:** CSV
 **Data Storage:** On the cloud in Google Drive and Google BiqQuery
