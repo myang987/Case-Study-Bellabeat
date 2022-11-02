@@ -94,7 +94,17 @@ Many of the datasets have problems with timestamp formatting when uploading to B
 
 ## Findings
 Why are users using smartwatches (Fitbit)?
-<br />&emsp;- To track physical activity/sleep/weight?
-<br />&emsp;Calculate the proportion of data logs that can be attributed to daytime activity (rested and active) to sleep. Distributions of the per-minute factors (Steps, Intensity, METs, Heartrate, Calories) help show the proportion.
+*To track physical activity/sleep/weight?*
+<br />&emsp;- Calculate the proportion of data logs that can be attributed to daytime activity (rested and active) to sleep. Distributions of the per-minute factors (Steps, Intensity, METs, Heartrate, Calories) help show the proportion.
 
+![Distributions without filter1](/images/image4.png)
+![Distributions without filter2](/images/image1.png)
+<sub>Distributions of all factors without filter</sub><br /><br />
 
+![Distributions with filter1](/images/image5.png)
+![Distributions with filter2](/images/image6.png)
+<sub>Distributions filter to remove when Steps per Minute = 0</sub><br /><br />
+
+Can see a majority of the logged measurement occur during rest (steps = 0, intensity=0, and resting heart rate/METs/calorie levels). Inferring that activity logs where steps_per_min = 0 is the user at rest (84.92% of steps_per_min logs are zeros) All distributions are heavily right-skewed. We can infer that majority of logs are used during rest/sleep. 
+![Percentage of Logs where steps = 0](/images/image7.png)
+<br /><sub>84.92% of the per-minute data points are when steps per minute = 0.</sub><br /><br />
