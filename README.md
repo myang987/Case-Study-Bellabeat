@@ -1,5 +1,5 @@
 # CASE STUDY: Bellabeat Fitness Data Analysis 
-##### Author: Lingfeng Yang
+##### Author: Mike Yang
 
 ##### Date: October 31, 2022
 
